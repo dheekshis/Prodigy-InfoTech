@@ -1,0 +1,63 @@
+/* styles.css */
+
+body {
+    font-family: 'Pacifico', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: url('https://i.pinimg.com/originals/2a/a0/b3/2aa0b300476272f9c7e2268b0b68b0e1.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+#player-turn {
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    font-size: 24px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3, #ff0000);
+    background-size: 400% 400%;
+    animation: rainbowBackground 10s linear infinite;
+    color: #000; /* Ensure X and O markers have a consistent color */
+}
+
+@keyframes rainbowBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#reset-button, #ai-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Pacifico', cursive;
+    margin: 5px;
+    z-index: 1; /* Ensure buttons stay on top of the background */
+}
